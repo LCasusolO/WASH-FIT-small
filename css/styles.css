@@ -1,0 +1,36 @@
+/* Archivo: css/styles.css */
+
+/* Reemplaza este bloque en tu css/styles.css */
+::-webkit-scrollbar {
+  width: 6px;        /* Grosor del scrollbar vertical */
+  height: 6px;       /* Grosor del scrollbar horizontal */
+}
+::-webkit-scrollbar-track {
+  background: #F7F9FB; /* Color plano equivalente a paho.card */
+}
+::-webkit-scrollbar-thumb {
+  background: #808080; /* Gris medio/oscuro (paho.gray-medium) para alto contraste */
+  border-radius: 4px;  /* Bordes ligeramente redondeados para estilo plano moderno */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #004C97; /* Cambia a azul oscuro (paho.dark-blue) al pasar el mouse */
+}
+
+/* Flat style adjustments - no shadows, no 3D borders */
+.leaflet-container {
+  font-family: inherit;
+  border: 1px solid theme('colors.paho.grid') !important; /* Cambiado para usar el token de la paleta */
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    background: theme('colors.paho.white') !important; /* Cambiado para usar el token de la paleta */
+    color: theme('colors.paho.gray-dark') !important; /* Cambiado para usar el token de la paleta */
+    padding: 0 !important;
+  }
+}
